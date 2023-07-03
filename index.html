@@ -1,0 +1,184 @@
+<!-- Created by Nyakotey🇬🇭🎹 -->
+<!--design by stephen-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heartbreaking Farewell</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="heartbreaking-farewell.css">
+</head>
+<body>
+    <div class="crusher"> 
+        <div class="chat-popup guy-chat" style="--i:0;">
+            <div class="chat-bubble cb-left">
+                <span> Aargh, I'm so nervous, just see how shaky my hands are</span>                 
+            </div>
+        </div> 
+        <div class="chat-popup guy-chat" style="--i:1;">
+            <div class="chat-bubble cb-left">
+                <span> Hope she says yes</span>                 
+            </div>
+        </div> 
+        <div class="chat-popup guy-chat" style="--i:2;">
+            <div class="chat-bubble cb-left">
+                <span> Will you be mine?</span>                 
+            </div>
+        </div>      
+        <div class="chat-popup guy-chat" style="--i:4;">
+            <div class="chat-bubble cb-left">
+                <span> Oh.........</span>                
+            </div>
+        </div> 
+        
+        <div class="present">
+            <div class="knot"></div>
+            <div class="cover"></div>
+            <div class="box"></div>
+        </div>     
+        <div class="guy">
+            <div class="head">
+                <div class="tete">
+                    <div class="hair"></div>
+                    <div class="face">
+                        <div class="eye">
+                            <div class="brow"></div>
+                            <div class="ball"></div>
+                        </div>
+                        <div class="nose"></div>
+                        <div class="mouth"></div>
+                        <div class="ear"></div>
+                    </div>
+                    <div class="neck"></div>
+                </div>
+            </div>
+            <div class="upper-body">
+                <div class="shirt">
+                    <div class="arms">
+                        <div class="right-arm">
+                            <div class="upper-arm"></div>
+                            <div class="forearm"></div>
+                        </div>
+                        <div class="left-arm">
+                            <div class="forearm"></div>
+                        </div>
+                    </div>
+                </div>                    
+            </div>
+            <div class="lower-body">
+                <div class="legs right-leg">
+                    <div class="thigh"></div>
+                    <div class="crus"></div>
+                    <div class="shoe"></div>
+                </div>
+                <div class="legs left-leg">
+                    <div class="thigh"></div>
+                    <div class="crus"></div>
+                    <div class="shoe"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="crush">
+        <div class="girl">
+            <div class="chat-popup girl-chat" style="--i:3" >
+                <div class="chat-bubble cb-left">
+                    <span> aw dear, I'm so sorry, but my heart belongs to someone else</span>
+                </div>
+            </div>
+            <div class="head">
+                <div class="hair"></div>
+                <div class="tete">
+                    <div class="face">
+                        <div class="eye">
+                            <div class="brow left-brow"></div>
+                            <div class="brow right-brow"></div>
+                            <div class="eyeball left-ball"></div>
+                            <div class="eyeball right-ball"></div>
+                        </div>
+                        <div class="nose"></div>
+                        <div class="mouth"></div>
+                        <div class="ear left-ear"></div>
+                        <div class="ear right-ear"></div>
+                    </div>
+                </div>
+                <div class="neck"></div>
+            </div>
+            <div class="upper-body">
+                <div class="stripe left-stripe"></div>
+                <div class="stripe right-stripe"></div>
+                <div class="chest"></div>
+                <div class="blouse">
+                    <div class="bb bb-left"></div>
+                    <div class="bb bb-right"></div>
+                </div>  
+                <div class="arm right-arm">
+                    <div class="upper-arm"></div>
+                    <div class="forearm">
+                        <div class="hand">
+                            <div class="fingers">
+                                <span class="f1"></span>
+                                <span class="f2"></span>
+                                <span class="f3"></span>
+                                <span class="f4"></span>
+                                <span class="f5"></span>
+                            </div>
+                            <div class="palm"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="arm left-arm">
+                    <div class="upper-arm"></div>
+                    <div class="forearm"></div>
+                </div>
+            </div>
+            <div class="lower-body">
+                <div class="skirt"> </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" style="--i:5;">
+        <div class="heartbreak" style="--i:5;"></div>
+        <div style="z-index:4;color:white; position:absolute; bottom:10%;"> THE END</div>
+    </div>
+
+    <aside class="flexing">
+        <div class="loader">Loading...</div>
+    </aside>
+
+    <audio src="https://www.dropbox.com/s/5kpjcnbov5i6rpt/Kina-sad.mp3?raw=1" loop>sorry no audio for you</audio>
+
+    <script>
+        const audio = document.getElementsByTagName("audio")[0];
+        const loader = document.getElementsByClassName("loader")[0];
+        const $ = selector => document.querySelector(selector);
+
+        function start(){
+            $("aside").style.display = "none";
+            $(".crush").style.display = "block";
+            $(".crusher").style.display = "block";
+            $(".overlay").style.display = "flex";
+            audio.play();
+            setTimeout(interlude,14000);
+        }
+        function showtime(){
+            loader.innerHTML = "<button>Start Animation</button>";
+            loader.onclick = start;
+        }
+        function interlude(){
+            $(".guy .right-leg").style.animation = "none";
+            $(".guy .left-leg").style.animation = "none";
+            $(".guy .forearm").style.animation = "none";
+            $(".guy .left-arm .forearm").style.animation = "none";
+                      $(".girl .right-arm .forearm").style.animation = "gesture 4s ease forwards";
+        } 
+        audio.addEventListener("canplaythrough", showtime);
+    </script>
+</body>
+</html>
+                

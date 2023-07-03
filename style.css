@@ -1,0 +1,796 @@
+/* Created by Nyakotey🇬🇭🎹 */
+/*design by stephen*/
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+*::before,
+*::after{
+    content:'';
+    position:absolute;
+}
+body, 
+aside{
+    background: #6f8fae;
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    height:100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+button{
+    background: rgb(4, 150, 174);
+    border: none;
+    color:white;
+    padding:1rem 1.3em;
+    font-size: 1.2em;
+}
+.flexing{
+    background: white;
+    justify-content: center;
+    position: absolute;
+    font-size: 1.2em;
+}
+/******************** guy *********************/
+.crusher{
+    position: absolute;    
+    left: 5%;
+    transform: scale(1.2,1);
+    animation: movetoscreen 4s forwards, movetolady 8s 6s forwards;
+}
+.guy{
+    --hair:#fbc000;
+    --skin:#ffdcbc;
+    --sleeve:#19d07b; 
+    --shirt:#30ea93;
+    --shorts-r:#1a414a;
+    --shorts-l:#466267;
+    --shoe:#1d2a37; 
+} 
+.guy .tete{
+    position:relative;
+    transform-origin:bottom;
+    animation:nod 2.5s infinite;
+    top:1vmin;left:.803vmin;
+    z-index: -1;
+}
+.guy .hair{
+    position:relative;
+    bottom:10%;
+    background-color: var(--hair);
+    width: 7vmin; height: 3.1vmin;
+    border-radius: 1.3vmin 1.2vmin 0.7vmin 0;
+}
+.guy .hair::after{
+    content: '';
+    position: absolute;
+    top:90%;
+    width:2.8vmin; height: 4vmin;
+    border-radius: 0 0 150% 45%;
+    background-color: var(--hair);
+    z-index:1;
+}
+.guy .face{
+    background-color: var(--skin);
+    width: 5.5vmin; height: 5vmin;
+    border-bottom-right-radius: 0.5vmin;
+    position: relative;left:5%;
+}
+.guy .face > *{
+    position: relative;
+    left: 75%;
+} 
+.guy .ear{
+    width:1.1vmin; height:2vmin;
+    box-shadow:-1px 0 1px  rgb(128 98 100);
+    border-radius: 50% 70% 25% 90%;
+    background-color:var(--skin);
+    position: absolute;
+    top:0.5vmin;left:25%;
+    z-index:2;
+}
+.guy .eye{
+    top:3%; left:3.8vmin;
+}
+.guy .eye >*{
+    position: relative;
+}
+.guy .brow{
+    background-color: #4e3118;
+    width:0.9vmin; height: 0.25vmin;
+    right:-15%;
+    border-radius:30%;
+}
+.guy .ball{
+    width:0; height:0;
+    border:0.5vmin solid transparent;
+    border-right:1vmin solid white;
+    top:2%;left:5%;
+}
+.guy .ball::before{
+    content: '';
+    position: absolute;
+    bottom:-0.4vmin; left:0.5vmin;
+    width:0.5vmin; height: 0.5vmin;
+    border-radius: 50%;
+    background-color: #1b3530;   
+}
+.guy .nose{
+    background-color: var(--skin);
+    width: 1.2vmin; height: 2vmin;
+    border-radius: 0 0 35% 0;
+    transform: rotate(-25deg);
+    left: 85%;bottom:5%;
+    z-index: -1;
+}
+.guy .mouth{
+    background-color:white;
+    width:1.45vmin;height: 0.95vmin;
+    bottom: 3%;left:76.%;
+    border: 0.31vmin #ff7b7b solid;
+    border-radius: 0% 60% 20% /0.4vmin;
+    border-right:1px solid pink;
+} 
+.guy .neck{
+    background-color: var(--skin);
+    width: 2.8vmin; height: 2.1vmin;
+    position: relative;
+    left:5%;top:-0.2vmin;
+}
+.guy .shirt::before{/*collar*/
+    content: '';
+    position: absolute;
+    top:-1%;left:15.5%;
+    width:2.8vmin; height: 1vmin;
+    border-radius:0 0 90% 90% ;
+    background-color: var(--skin);
+}
+.guy .shirt{
+    position: relative;
+    background-color: var(--shirt);
+    width: 8vmin;
+    height: 26vmin;
+    border-radius:20% 60% 0 30%;
+}
+.guy .shirt::after{ /* butt */
+    content: '';
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:8vmin;
+    height: 6.88vmin;
+    border-radius:0 0 0 2vmin /0 25%;
+    background-color: var(--shorts-r);
+}
+.guy .right-arm{
+    position:absolute;
+    top:12%;left:35%;
+}
+.guy .upper-arm{
+    background-color: var(--sleeve);
+    width: 4.3vmin; height: 7vmin;
+    border-radius: 2vmin 2vmin 0 0; 
+    transform: rotate(-25deg);
+    position: relative;
+    left: -10%; top: 13%;
+    z-index: 1;
+}
+.guy .forearm::before{ /*elbow*/
+    content: '';
+    position: absolute;
+    bottom:-7.2%;left:-16%;
+    width:2.5vmin; height: 5vmin;
+    border-radius:50% 50% 0 40%;
+    background-color:var(--skin);  
+    transform: rotate(-32deg);
+}
+.guy .forearm{
+    background-color: var(--skin);
+    width: 13vmin; height: 2.8vmin;
+    position: relative;
+    left: 25%; top:0%;
+    border-top:1px solid rgba(74,74,74,0.2);
+    border-radius: 0 30% 35% 0;
+    animation:play 1.7s ease infinite;
+}
+.guy .left-arm{
+    position:absolute;
+    top:27.5%;left:20%;
+    z-index:-2;
+}
+.guy .left-arm .forearm{
+    border-top:none;
+    animation: play 1.7s ease 2.5s infinite alternate;
+}
+.guy .lower-body{
+    position: relative;
+    top: 1vmin;
+}
+.guy .legs{
+    position:relative;
+    /* z-index: -1;   */
+    left: -0%;
+}
+.guy .legs > *{
+    position:relative;
+}
+.guy .thigh{
+    background-color:var(--shorts-r);
+/*     width: 16vmin;height: 7vmin; */
+    border-radius:99% 96% 20% 20% /25vmin 15vmin 13vmin 15vmin;
+    left:.5%;top:-7vmin;
+    width: 8vmin;height: 14vmin;
+}
+.guy .crus{
+    background-color: var(--skin);
+    width: 4vmin;height: 20vmin;
+    position: relative;
+    left:30%;top:-10vmin;
+    border-right:1px solid rgba(74,74,74,0.13);
+    border-radius: 0 14vmin 10vmin 5vmin / 0 10% 500% 100%;
+    z-index: -1;
+}
+.guy .shoe::before{/*cutout*/
+    content: '';
+    position: absolute;
+    top:-8%; left:13%;
+    width:2.4vmin; height: 1vmin;
+    border-radius:0 0 100% 150% ;
+    background-color: var(--skin);
+}
+.guy .shoe{
+    background-color: var(--shoe);
+    width: 7vmin;height: 4vmin;
+    position: relative;
+    left:22%; bottom: 11vmin;
+    border-top:1px solid rgba(255,255,255,0.7);
+    border-radius: 3px 90% 20% 20%;
+    box-shadow:0 0.4vmin 1px white, 0 0.6vmin 0 var(--shoe);
+}
+.guy .left-leg{
+    position:absolute;
+    left:5%;bottom:1%;
+    transform-origin: top;
+    animation:walk-left 3s infinite ;
+    z-index:-3;
+}
+.guy .left-leg .crus{
+    border-right:none;
+}
+.guy .left-leg .thigh{
+    background-color: var(--shorts-r);
+    left:-8%;
+}
+.guy .right-leg{
+    transform-origin: top;
+    animation:walk-right 3s infinite;
+}
+
+.crush{
+    position: absolute;
+    right: 20%;
+    transform: scale(0.8) translate(-30%);
+}
+.girl{
+    --skin:#ffdcbc;
+    --hair:#434455;
+    --blouse: whitesmoke;
+    --skirt: linear-gradient(#ee0094 2%, white 2%);
+    transform: scale(1.4);
+}
+.girl *{
+    position: relative;
+}
+.girl .head{
+    top:-5.2vmin;
+    -webkit-perspective: 1.2vmin;
+    perspective: 0.4vmin;
+}
+.girl .hair{
+    position: absolute;
+    left:30%;bottom:-8%;
+    background-color: var(--hair);
+    width: 10vmin; height: 15vmin;
+    border-radius: 18vmin 18vmin 15vmin 15vmin;
+    z-index: -1;
+    transform: rotateX(1deg);
+}
+.girl .tete{
+    background-color: var(--skin);
+    width: 7vmin; height: 8vmin;
+    border-radius: 30% 30% 4vmin 4vmin / 3vmin 3vmin 50% 50%;
+    left:37%;top:0.34vmin;
+}
+.girl .face{
+    width: 6vmin; height: 6.5vmin;
+    top:20%;left:7.5%;
+}
+.girl .ear{
+    width:1.1vmin; height:2vmin;
+    background-color:var(--skin);
+    position: absolute;
+    top: 19%;
+}
+.girl .left-ear{
+    border-radius: 50% 70% 25% 90%;
+    left:-17%;
+}
+.girl .right-ear{
+    border-radius: 70% 50% 90% 25% ;
+    right:-15%;
+}
+.girl .eye{top:19%}
+.girl .brow{
+    width:1.9vmin; height: 1vmin;
+    position: absolute;
+    top:-1vmin;
+    border-radius:50%;
+    border-top:.4vmin solid #443f3a;
+}
+.girl .left-brow{
+    left:5%;
+    transform: rotate(-10deg);
+}
+.girl .right-brow{
+    right:5%;
+    transform: rotate(10deg);
+}
+.girl .eyeball{
+    background: white;
+    width: 1.5vmin;height: 1.5vmin;
+    border-top:.2px solid black;
+    border-left:.2px solid black;
+    border-radius: 1.05vmin 0;
+    transform: rotate(45deg);
+    position: absolute;
+    top:-0.4vmin;
+    animation:blink 3s infinite;
+}
+.girl .eyeball::before{
+    background: #0b8798;
+    width: 1vmin;height: 1vmin;
+    border-radius: 50%;
+    top:12%;left:20%;
+    animation: blink-hide 3s infinite;
+    z-index:-20;
+}
+.girl .eyeball::after{
+    background: #000000;
+    width: 0.65vmin;height: 0.65vmin;
+    border-radius: 50%;
+    top:25%;left:30%;
+    animation: blink-hide1 3s infinite;
+}
+.girl .left-ball{left:10%;}
+.girl .right-ball{right:10%;}
+.girl .nose{
+    width: 1vmin;height: 1vmin;
+    border-radius: 50%;
+    box-shadow: 0 1px 0 brown;
+    position: absolute;
+    left:40%;bottom: 47%;
+}
+.girl .mouth{ 
+    background: white;
+    width: 2.5vmin;height: 1.2vmin;
+    border: 0.35vmin solid #f90c0c;
+    border-radius: 0 0 50% 50%;
+    position: absolute;
+    left:29%;bottom:15%;
+    /* animation:sing 0.7s ease 1s infinite alternate; */
+}
+.girl .neck{
+    background-color: var(--skin);
+    width: 2.8vmin; height: 2.1vmin;
+    left:45%;
+}
+.girl .upper-body{
+    -webkit-perspective: 2vmin;
+    perspective: 2vmin;
+}
+.girl .chest{
+    background-color: var(--skin);
+    top:-8vmin;left:32%;
+    width: 9vmin; height: 8vmin;
+    transform: rotateX(5deg);
+    border-radius: 90% 90% 0 0 / 5vmin 5vmin 0 0;
+    z-index: -2;
+}
+.girl .stripe{
+    position: absolute;
+    top:-72.3%;
+    background: var(--blouse);
+    width: 1vmin; height: 6vmin;
+    z-index: 1;
+}
+.girl .left-stripe{
+    left: 33%;
+    transform: rotate(5deg);
+}
+.girl .right-stripe{
+    right:33%;
+    transform: rotate(-5deg);
+}
+.girl .blouse{  
+    position: absolute;
+    left:30%;bottom: -25%;
+    background: linear-gradient(var(--blouse) 70%, #ee0094 70%);
+    width: 10vmin; height: 11vmin;
+    border-radius: 3vmin  3vmin 2% 2%;
+    transform: rotateX(-5deg);
+}
+.girl .bb{
+    background: var(--blouse);
+    width: 6vmin; height: 5vmin;
+    border-radius: 50%;
+    position: absolute;
+    top:-7%;
+    z-index: 1;    
+    box-shadow: 0 2px 2px rgba(0,0,0,0.03);
+}
+.girl .bb-left{left:-3%;}
+.girl .bb-right{right:-3%;}
+.girl .left-arm, 
+.girl .right-arm{
+    position: absolute;
+    top:-75%;
+}
+.girl .left-arm{left:17%;}
+.girl .right-arm{right:17%;}
+.girl .upper-arm{
+    background-color: var(--skin);
+    width: 2.8vmin; height: 12vmin;
+    z-index: -1;
+}
+.girl .left-arm .upper-arm{
+    left: 20%;
+    transform: rotate(15deg);  
+    border-radius:5vmin 0 3vmin 3vmin;
+}
+.girl .right-arm .upper-arm{
+    right:20%;
+    transform: rotate(-15deg);
+    border-radius:0 5vmin 3vmin 3vmin;
+}
+.girl .forearm{
+    top:-2vmin;
+    background-color: var(--skin);
+    width: 2.8vmin; height: 9vmin;
+    border-radius: 0 0 1.4vmin 1.4vmin /0 0 50% 50%;
+    z-index: -1;
+}
+.girl .left-arm .forearm{ 
+    left: 20%;
+    transform: rotate(-15deg);  
+}
+.girl .right-arm .forearm{
+    right: 20%;
+    transform: rotate(15deg);  
+    transform-origin: top;
+    animation: gesture 4s ease infinite alternate;
+    height:6vmin;
+    border-radius: 0 0 1.4vmin 1.4vmin /0 0 50% 50%;
+}
+.girl .hand{
+    left:-15%;top:113%;
+    transform:rotateY(180deg) rotate(180deg) scale(.7,.6);
+    perspective:5vmin;
+}
+.girl .fingers{
+    top:-3.8vmin;
+    transform: scale(.91,1.2);
+}
+.fingers *{
+    background: var(--skin);
+    border-radius: 1vmin 1vmin 0 0;
+    display: inline-block;
+    position:absolute;
+    transform-origin:bottom;
+    width:1vmin;
+    top:0;
+}
+.f1{
+    transform:rotate(-8deg); 
+    height:3.4vmin;
+    left:0;top:1vmin;
+}
+.f2{
+    transform:rotate(-4deg); 
+    height:3.7vmin;
+    left:1vmin;top:0.2vmin;
+}
+.f3{
+    height:4vmin;
+    left:1.95vmin;
+}
+.f4{
+    transform:rotate(4deg); 
+    height:3.7vmin;
+    left:2.95vmin;top:0.2vmin;
+}
+.f5{
+    transform:rotate(25deg);
+    width:1.05vmin; height:3.2vmin; 
+    left:3.3vmin;top:1.45vmin;
+}
+.girl .palm{
+    background: var(--skin);
+    width:4.5vmin; height:4.2vmin; 
+    border-radius:90% / 100% 100% 15vmin 15vmin;
+    position:absolute;
+    transform: rotateY(5deg);
+}
+.girl .skirt{
+    background: var(--skirt);
+    width: 25vmin; height: 26vmin;    
+    border-radius: 10vmin  10vmin 10vmin 15vmin /90% 90% 5% 5%;
+}
+/*chat*/
+.chat-bubble{
+    position: relative;
+    width: 22vmin; 
+    border-radius: 3vmin;
+    box-shadow: 0 -1px 1px rgba(0,0,0,0.1) ;
+    background-color: #f1f798;
+    color:#18161f;
+    word-wrap: break-word;
+    padding: 1em .5em 1em 1.1em;
+}
+.cb-left{
+    border-bottom-left-radius: 15%; 
+    text-align:left;
+}
+.cb-right{
+    border-bottom-right-radius: 15%;
+    text-align:right;
+}
+.cb-left::after,
+.cb-right::after{
+    content:'';
+    position: absolute;
+    bottom:-10%;
+    width: 6vmin; height: 6vmin;
+    background:#f1f798;
+    border-radius: 0px 4vmin 0 90%;
+    z-index:-1;
+}
+.cb-left::after{
+    left:0;
+    transform: rotate(100deg);
+}
+.cb-right::after{
+    right:0;
+    transform: rotate(-20deg);
+}
+.chat-popup{
+    position:absolute;
+    left:80%;
+    top:-35%;
+    font-size:2.5vmin;
+}
+.guy-chat{
+    top: -20%;
+    left: 130%;
+}
+.guy-chat, 
+.girl-chat{
+    opacity: 0;
+    animation: proposal 6s;
+    animation-delay: calc(7s * var(--i));
+}
+/******* Present ********/
+.present{
+    position: absolute;
+    z-index: 2; left: 150%;
+    top: 15%;
+}
+.present *{
+    position: relative;
+}
+.knot{
+    background: #00e4ff;
+    border-radius: 2vmin 2vmin 0 0;
+    height: 1vmin;
+    width: 2vmin;
+    left: 45.5%;
+    transform: translateX(-45.5%);
+}
+.knot::before,
+.knot::after{
+    background: #00e4ff;
+    height: 2.2vmin;
+    width: 5vmin;
+    top: -110%;
+}
+.knot::before{
+    clip-path: polygon(30% 0%, 0% 100%, 100% 100%);
+    left: -150%;
+}
+.knot::after{
+    clip-path: polygon(70% 0%, 0% 100%, 100% 100%);
+    right: -150%;
+}
+.cover{
+    background: #ee0094;
+    height: 2.2vmin;
+    width: 11vmin;
+    left: -4.5%;
+}
+.box{
+    background: #ee0094;
+    border-top: .6vmin solid rgba(0,0,0,.1);
+    height: 8vmin;
+    width: 10vmin;
+}
+.box::before,
+.cover::before{/* ribbon */
+    background: #00e4ff;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2vmin;
+}
+.box::before{ 
+    border-top: .6vmin solid rgba(0,0,0,.1);
+    height: 8vmin;
+    top: -7%; 
+}
+.cover::before{
+    height: 2.2vmin;
+    box-shadow: 0 0 1px 0 #00e4ff;
+}
+/* end screen */
+.overlay{
+    position:absolute;
+    --bg-color: rgba(16, 13, 26, 0.85);
+    animation: fadeIn 2s forwards;
+    animation-delay: calc(7s * var(--i));
+    background: var(--bg-color);
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    overflow: hidden;
+}
+/****** heartbreak ******/
+.heartbreak, 
+.heartbreak::before{
+    background: crimson;
+    border-radius: 10vmin 10vmin 0 0;
+    height: 15vmin;
+    width: 10vmin;
+}
+.heartbreak{
+    transform: rotate(45deg);
+    animation: grow .5s forwards;
+    animation-delay: calc(7s * var(--i));
+}
+.heartbreak::before{
+    left: -25%;
+    top: 17%; 
+    transform: rotate(-90deg);
+}
+.heartbreak::after{
+    background: rgb(31, 31, 45);
+    clip-path: polygon(35% 0%, 0% 19%, 57% 38%, 13% 60%, 54% 78%, 14% 100%, 49% 100%, 81% 78%, 44% 58%, 81% 36%, 37% 17%, 56% 0%);
+    left: 13%;
+    top: 10%;
+    height: 15.8vmin;
+    width: 7vmin;
+    transform: rotate(-35deg);
+    z-index: 2;
+}
+
+/****** guy animations ******/
+@keyframes nod{
+    0%{transform: rotate(0deg);}
+    30%{transform: rotate(1.5deg);}
+    80%{transform: rotate(-1.5deg);}
+    100%{transform: rotate(0deg);}
+}
+@keyframes play{
+    20%{transform: rotate(6deg);}
+    30%{transform: rotate(0deg);}
+    50%{transform: rotate(9deg);}
+    70%{transform: rotate(9deg);}
+}
+@keyframes walk-left{
+    0%{transform: rotate(0deg);}
+    25%{transform: rotate(15deg) translate(-10%);}
+    50%{transform: rotate(0deg);}
+    75%{transform: rotate(-15deg) translate(5%);}
+    100%{transform: rotate(0deg);}
+}
+@keyframes walk-right{
+    0%{transform: rotate(0deg);}
+    25%{transform: rotate(-15deg) translate(10%);}
+    50%{transform: rotate(0deg);}
+    75%{transform: rotate(15deg) translate(-10%);}
+    100%{transform: rotate(0deg);}
+}
+@keyframes movetoscreen{
+    0%{left: 2%;}
+    100%{left: 5%;}
+}
+@keyframes movetolady{
+    0%{left: 5%;}
+    100%{left: 25%;}
+}
+
+/* girl animations */
+@keyframes blink{
+    90%{
+        background: white;
+        border:none;
+        border-top:.2px solid black;
+        border-left:.2px solid black;
+    }
+    to{
+        background-color: var(--skin);
+        border:none;
+        border-bottom:.2px solid black;
+        border-right:.2px solid black;
+    }
+}
+@keyframes blink-hide{
+    90%{background:#0b8798;}
+    95%{background: var(--skin);}
+    to{background: var(--skin);}
+}
+@keyframes blink-hide1{
+    90%{ background:#000;}
+    95%{background: var(--skin);}
+    to{ background: var(--skin);}
+}
+@keyframes sing{
+    100%{
+        width:1.5vmin;height:1.3vmin;
+        left:38%;
+        border-radius: 50%;
+    }
+}
+@keyframes gesture{
+    from{
+        transform: rotate(15deg);
+        left: 20%;top:-1.9vmin;
+    }
+    20%{
+        transform: rotate(15deg);
+        left: 20%;top:-1.9vmin;
+    }
+    to{
+        transform: rotate(-85deg);
+        left: 20%;top:-1.5vmin;
+    }
+}
+/* chat animation*/
+@keyframes proposal{
+    0%{opacity: 0;}
+    2%, 98%{ opacity: 1;}
+    99%{opacity: 0;}
+    /* 100%{ display: none;} */
+}
+/* heartbreak */
+@keyframes grow{
+    0%{transform: scale(0.2) rotate(45deg);}
+    100%{transform: scale(3.2) rotate(45deg);}
+}
+/* end screen */
+@keyframes fadeIn{
+    0%{opacity: 0;}
+    100%{ opacity: 1;}
+}
+/* INIT */
+.crush, 
+.crusher,
+.overlay{
+    display: none;
+}
